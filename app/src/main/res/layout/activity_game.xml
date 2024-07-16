@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Game">
+
+    <Button
+        android:id="@+id/playingScore"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/accent_colour3"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:text="@string/score"
+        app:layout_constraintBottom_toTopOf="@+id/arrowPad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+    </Button>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="390dp"
+        android:layout_height="390dp"
+        android:gravity="center"
+        android:background="@color/primary_colour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+
+        <RelativeLayout
+            android:id="@+id/board"
+            android:layout_width="380dp"
+            android:layout_height="380dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/black"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@id/finalScoreDisplay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/highestScoreField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/highestScore"
+            android:textColor="@color/primary_colour"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"/>
+
+        <Button
+            android:id="@+id/finalScoreDisplay"
+            android:background="@color/black"
+            android:layout_width="wrap_content"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="70dp"
+            android:layout_marginTop="140dp"
+            android:textSize="25sp"
+            android:text="@string/finalScore">
+        </Button>
+
+        <Button
+            android:id="@+id/new_game"
+            android:backgroundTint="@color/accent_colour4"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="120dp"
+            android:layout_marginTop="100dp"
+            android:text="@string/newGame">
+        </Button>
+
+        <Button
+            android:id="@+id/resume"
+            android:backgroundTint="@color/accent_colour4"
+            android:layout_width="150dp"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/new_game"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="120dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/resume_game">
+        </Button>
+
+        <Button
+            android:id="@+id/playAgain"
+            android:backgroundTint="@color/accent_colour2"
+            android:layout_width="180dp"
+            android:textAlignment="center"
+            android:layout_height="90dp"
+            android:layout_below="@id/resume"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="100dp"
+            android:layout_marginTop="40dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="@string/gameOverPlayAgain">
+        </Button>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/arrowPad"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center">
+
+            <Button
+                android:id="@+id/up"
+                android:layout_width="110dp"
+                android:layout_height="80dp"
+                android:background="@color/secondary_colour"
+                android:text="@string/up">
+            </Button>
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/left"
+                android:layout_width="110dp"
+                android:layout_height="80dp"
+                android:background="@color/secondary_colour"
+                android:text="@string/left">
+            </Button>
+
+            <Button
+                android:id="@+id/pause"
+                android:layout_width="110dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:background="@color/secondary_colour"
+                android:text="@string/pause">
+            </Button>
+
+            <Button
+                android:id="@+id/right"
+                android:layout_width="110dp"
+                android:layout_height="80dp"
+                android:background="@color/secondary_colour"
+                android:text="@string/right">
+            </Button>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center">
+
+            <Button
+                android:id="@+id/down"
+                android:layout_width="110dp"
+                android:layout_height="80dp"
+                android:background="@color/secondary_colour"
+                android:text="@string/down">
+            </Button>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

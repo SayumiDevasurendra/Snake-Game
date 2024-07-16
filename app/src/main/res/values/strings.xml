@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Snake Game</string>
+    <string name="welcomeMsg">Welcome to Snake and Meat</string>
+    <string name="playText">Play</string>
+    <string name="newGame">New Game</string>
+    <string name="resume_game">Resume Game</string>
+    <string name="gameOverPlayAgain">Game Over ! Play Again</string>
+    <string name="up">UP</string>
+    <string name="left">LEFT</string>
+    <string name="pause">pause</string>
+    <string name="right">RIGHT</string>
+    <string name="down">DOWN</string>
+    <string name="score">score</string>
+    <string name="score_format">score: %1$d</string>
+    <string name="highestScore">Highest Score: 0</string>
+    <string name="your_score">Your score is %1$d</string>
+    <string name="highScore">Highest Score: %1$d</string>
+    <string name="finalScore">Final Score</string>
+</resources>
